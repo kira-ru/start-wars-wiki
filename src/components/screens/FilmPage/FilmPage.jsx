@@ -6,8 +6,8 @@ import {FILMS} from "../../../constants/swapiAPI";
 import styles from './filmpage.module.css'
 import RelatedItems from "./components/RelatedItems/RelatedItems";
 
-const FilmPage = ({film, ...relatedItems}) => {
-
+const FilmPage = ({film, relatedItemsUrls}) => {
+    console.log(relatedItemsUrls)
     return (
         <section className={styles.wrapper}>
             <Container>
@@ -17,8 +17,8 @@ const FilmPage = ({film, ...relatedItems}) => {
                 </div>
 
                 {
-                    Object.entries(relatedItems).map(([title, item]) =>
-                    <RelatedItems key={title} title={title} items={item}/>
+                    Object.entries(relatedItemsUrls).map(([resource, urls]) =>
+                    <RelatedItems key={resource} resource={resource} itemsUrls={urls}/>
                 )}
 
             </Container>
