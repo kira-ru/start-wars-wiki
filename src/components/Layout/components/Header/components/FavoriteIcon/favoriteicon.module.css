@@ -1,0 +1,11 @@
+.emblem {
+    position: relative;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number {
+    margin-top: -10px;
+}

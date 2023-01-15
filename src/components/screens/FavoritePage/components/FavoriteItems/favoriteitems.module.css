@@ -1,0 +1,16 @@
+.wrapper {
+
+}
+
+.inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item + .item {
+    margin-left: 10px;
+}
+
+.title {
+    font-size: 20px;
+}

@@ -1,0 +1,7 @@
+.wrapper + .wrapper {
+    margin-top: 70px;
+}
+
+.title {
+    font-size: var(--font-size-medium)
+}
