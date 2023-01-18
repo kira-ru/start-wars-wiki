@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
-import cn from 'classnames'
-import styles from './header.module.css'
 import Logo from "../../../UI/Logo/Logo";
 import Burger from "./components/Burger/Burger";
 import Dropdown from "./components/Dropdown/Dropdown";
 import Container from "../../../Container/Container";
 import NavMenu from "./components/NavMenu/NavMenu";
 import FavoriteIcon from "./components/FavoriteIcon/FavoriteIcon";
+
+import styles from './header.module.css'
+import cn from 'classnames'
 
 const Header = () => {
     const links = [
@@ -18,21 +19,20 @@ const Header = () => {
         {text: 'Species', href: '/species?page=1'},
     ]
 
-    const [active, setActive] = useState(false)
+    const [dropDownActive, setDropDownActive] = useState(false)
 
     return (
-        <header className={styles.header}>
+        <header className={styles.wrapper}>
             <Container>
-                <menu className={styles.header_wrapper}>
+                <menu className={styles.inner}>
                     <ul className={cn('list-reset', styles.menu)}>
-
-                        <div className={styles.inner}>
+                        <div className={styles.row}>
                             <Burger
-                                active={active}
-                                handler={() => setActive(!active)}
+                                active={dropDownActive}
+                                handler={() => setDropDownActive(!dropDownActive)}
                                 classes={styles.burger_btn}
                             />
-                            <Dropdown active={active} setActive={setActive} links={links}/>
+                            <Dropdown active={dropDownActive} setActive={setDropDownActive} links={links}/>
                             <Logo classes={styles.logo}/>
                         </div>
 
@@ -46,4 +46,4 @@ const Header = () => {
     );
 };
 
-export default React.memo(Header);
+export default Header;

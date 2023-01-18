@@ -13,8 +13,9 @@ import {useGetRelatedItemsQuery} from "../../../../../service/swapiAPI";
 
 const RelatedFilms = ({filmsUrls}) => {
     const {data: films, isFetching, isError} = useGetRelatedItemsQuery(filmsUrls)
-    console.log(filmsUrls)
+
     if (isFetching) return <MiniLoader/>
+
     return (
         <div className={styles.wrapper}>
             <Title classes={styles.title}>Related Films</Title>

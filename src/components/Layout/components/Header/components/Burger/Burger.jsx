@@ -1,12 +1,9 @@
 import React from 'react';
+
 import styles from './burger.module.css'
 import cn from 'classnames'
 
 const Burger = ({classes, handler, active}) => {
-    const click = () => {
-        handler()
-        console.log('click')
-    }
 
     return (
         <button
@@ -23,24 +20,5 @@ const Burger = ({classes, handler, active}) => {
         </button>
     );
 };
-
-{/*<label*/
-}
-{/*    className={active ? styles.active : undefined}*/
-}
-{/*    htmlFor="check"*/
-}
-{/*>*/
-}
-{/*    <input type="checkbox" id="check"/>*/
-}
-{/*    <span></span>*/
-}
-{/*    <span></span>*/
-}
-{/*    <span></span>*/
-}
-{/*</label>    */
-}
 
 export default Burger;

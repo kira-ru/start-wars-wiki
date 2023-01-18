@@ -1,16 +1,17 @@
 import React from 'react';
-import cn from "classnames";
-import styles from "../../header.module.css";
+
 import MenuLink from "../../../../../UI/MenuLink/MenuLink";
+import styles from './navmenu.module.css';
+import cn from "classnames";
+
 
 const NavMenu = ({links}) => {
     return (
-        <nav className={cn('list-reset', styles.nav_menu)}>
-
+        <nav className={cn('list-reset', styles.wrapper)}>
             {links.map((item, index) => (
                 <MenuLink
                     key={index}
-                    classes={styles.menu__item}
+                    classes={styles.item}
                     href={item.href}
                 >
                     {item.text}

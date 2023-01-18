@@ -1,11 +1,11 @@
 import React from 'react';
 import PersonalPage from "../../components/screens/PersonalPage/PersonalPage";
 import Loader from "../../components/UI/Loader/Loader";
+import Error from "../../components/UI/Error/Error";
 
 import {useParams} from "react-router-dom";
 import {PEOPLE, VEHICLES} from "../../constants/swapiAPI";
 import {useGetPersonalDataQuery} from "../../service/swapiAPI";
-import Error from "../../components/UI/Error/Error";
 
 const Vehicles = () => {
     const id = useParams().id

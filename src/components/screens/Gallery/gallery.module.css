@@ -1,4 +1,23 @@
 .wrapper {
-
 }
 
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: var(--font-size-medium);
+}
+
+.title {
+    margin-right: 20px;
+}
+
+.input {
+
+}

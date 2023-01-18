@@ -1,7 +1,14 @@
-.wrapper + .wrapper {
-    margin-top: 70px;
+.wrapper {
+    backdrop-filter: blur(var(--blur));
+    padding: 5px 0 0 5px;
+    margin-bottom: 70px;
 }
 
 .title {
-    font-size: var(--font-size-medium)
+    font-size: var(--font-size-medium);
+    margin-bottom: 7px;
+}
+
+.loading + .loading {
+    margin-top: 25px;
 }

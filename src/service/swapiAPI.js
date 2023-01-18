@@ -1,5 +1,5 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
-import {SWAPI_ROOT_2} from "../constants/swapiAPI";
+import {PAGE, SEARCH, SWAPI_ROOT_2} from "../constants/swapiAPI";
 import {transformData} from "../helpers";
 import {getRelatedItems} from "../helpers/getRelatedItems";
 
@@ -31,12 +31,17 @@ export const swapiAPI = createApi({
     reducerPath: 'starWarsApi',
     baseQuery: baseQueryWithTransform,
     endpoints: (builder) => ({
+
         getResource: builder.query({
-            query: ({page, resource}) => `${resource}/?page=${page}`,
+            query: ({page, resource}) => `${resource}/${PAGE}=${page}`,
         }),
 
         getPersonalData: builder.query({
             query: ({resource, id}) => `${resource}/${id}`,
+        }),
+
+        searchItem: builder.query({
+            query: ({resource, searchValue}) => `${resource}/${SEARCH}=${searchValue}`
         }),
 
         getRelatedItems: builder.query({
@@ -47,7 +52,7 @@ export const swapiAPI = createApi({
                     console.error(e.message)
                 }
             }
-        })
+        }),
     })
 })
 
@@ -56,4 +61,5 @@ export const {
     useGetPersonalDataQuery,
     useGetResourceQuery,
     useGetRelatedItemsQuery,
+    useSearchItemQuery
 } = swapiAPI

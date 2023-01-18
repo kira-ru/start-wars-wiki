@@ -1,10 +1,11 @@
 import React from 'react';
-import {useParams} from "react-router-dom";
-import {useGetPersonalDataQuery, useGetRelatedItemsQuery} from "../../service/swapiAPI";
-import {PEOPLE, SPECIES} from "../../constants/swapiAPI";
 import Loader from "../../components/UI/Loader/Loader";
 import PersonalPage from "../../components/screens/PersonalPage/PersonalPage";
 import Error from "../../components/UI/Error/Error";
+
+import {useParams} from "react-router-dom";
+import {PEOPLE, SPECIES} from "../../constants/swapiAPI";
+import {useGetPersonalDataQuery} from "../../service/swapiAPI";
 
 const Species = () => {
     const id = useParams().id

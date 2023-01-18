@@ -2,12 +2,14 @@ import React from 'react';
 import Container from "../../Container/Container";
 import FilmCard from "../../FilmCard/FilmCard";
 import Description from "../../Description/Description";
-import {FILMS} from "../../../constants/swapiAPI";
-import styles from './filmpage.module.css'
 import RelatedItems from "./components/RelatedItems/RelatedItems";
+import styles from './filmpage.module.css'
+
+import {FILMS} from "../../../constants/swapiAPI";
 
 const FilmPage = ({film, relatedItemsUrls}) => {
-    console.log(relatedItemsUrls)
+    const resourceAndUrlsEntries = Object.entries(relatedItemsUrls)
+
     return (
         <section className={styles.wrapper}>
             <Container>
@@ -17,8 +19,12 @@ const FilmPage = ({film, relatedItemsUrls}) => {
                 </div>
 
                 {
-                    Object.entries(relatedItemsUrls).map(([resource, urls]) =>
-                    <RelatedItems key={resource} resource={resource} itemsUrls={urls}/>
+                    resourceAndUrlsEntries.map(([resource, urls]) =>
+                        <RelatedItems
+                            key={resource}
+                            resource={resource}
+                            itemsUrls={urls}
+                        />
                 )}
 
             </Container>

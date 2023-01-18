@@ -32,10 +32,10 @@
 
     --border-radius-medium: 10px;
 
-    --related-width: 549px;
+    --related-width: calc((2 * var(--card-width)) + 10px);
 
     --card-height: 370px;
-    --card-width: 270px;
+    --card-width: 225px;
     --card-padding: 20px 10px;
 
     --blur: 12px;

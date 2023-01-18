@@ -45,7 +45,7 @@ const Slider = ({children, classes, largeSize=false}) => {
                 breakpoint: 760,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 2,
                     infinite: false,
                     arrows: false,
                     dots: true,
@@ -90,7 +90,7 @@ const Slider = ({children, classes, largeSize=false}) => {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
-                    infinite: true,
+                    infinite: false,
                     arrows: false,
                     dots: true,
                     dotsClass: styles.dots,
