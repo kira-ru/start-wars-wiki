@@ -14,11 +14,9 @@ const Item = ({item, resource, classes}) => {
             to={`/${resource}/${item.id}`}
         >
             <li className={styles.item} key={item.name}>
-                <Image className={styles.item_image} src={item.image} alt={item.name}/>
-                {/*<img className={styles.item_image} src={item.image} alt={item.name}/>*/}
-                <span className={styles.item_name}>{item.name}</span>
+                <Image className={styles.itemImage} src={item.image} alt={item.name}/>
+                <span className={styles.itemName}>{item.name}</span>
             </li>
-
         </Link>
     );
 };

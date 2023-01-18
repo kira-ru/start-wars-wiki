@@ -1,5 +1,4 @@
 import {useSelector} from "react-redux";
-import styles from "../../../pages/favorite/favorite.module.css";
 import Container from "../../Container/Container";
 import Title from "../../UI/Title/Title";
 import React from "react";
@@ -9,7 +8,7 @@ const Favorite = () => {
     const favoriteItems =  useSelector(state => state.favorite)
 
     return (
-        <section className={styles.wrapper}>
+        <section>
             <Container>
                 <Title>Favorite</Title>
 

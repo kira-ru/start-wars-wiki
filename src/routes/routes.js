@@ -10,7 +10,7 @@ import Species from "../pages/species/Species";
 import Home from "../pages/home/Home";
 import Error from "../components/UI/Error/Error";
 import Film from "../pages/film/Film";
-import Favorite from "../pages/favorite/Favorite";
+import FavoritePage from "../components/screens/FavoritePage/FavoritePage";
 
 const routesConfig = [
     {
@@ -66,8 +66,7 @@ const routesConfig = [
                 element: <Film/>
             },
             {
-                path: appRoutes.FAVORITE,
-                element: <Favorite/>
+                path: appRoutes.FAVORITE, element: <FavoritePage/>
             },
 
             {

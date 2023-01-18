@@ -6,10 +6,16 @@ import Title from "../../UI/Title/Title";
 import Input from "../../UI/Input/Input";
 import GalleryItems from "./components/GalleryItems/GalleryItems";
 import SearchItems from "./components/SearchItems/SearchItems";
+import {useDebounce} from "../../../hooks";
 
 
 const Gallery = ({resource}) => {
     const [searchValue, setSearchValue] = useState('')
+
+    const onChange = (e) => {
+        setSearchValue(useDebounce(e.target.value, 1000))
+
+    }
 
     return (
         <section className={styles.wrapper}>
@@ -18,11 +24,9 @@ const Gallery = ({resource}) => {
                     <Title classes={styles.title}>{resource}</Title>
                     <Input
                         classes={styles.input}
-                        placeholder={'search...'}
+                        placeholder="search..."
                         value={searchValue}
-                        onChange={(e) => {
-                            setSearchValue(e.target.value)
-                        }}
+                        onChange={onChange}
                     />
                 </div>
 

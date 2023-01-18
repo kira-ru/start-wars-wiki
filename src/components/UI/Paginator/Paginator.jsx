@@ -29,7 +29,7 @@ const Paginator = ({next, prev, total, currentPage, resource}) => {
         <div className={styles.paginator}>
 
             <button className={styles.btn} disabled={!prev} onClick={prevPage}>
-                <img src={prevNext} alt="previous page"/>
+                <img className={styles.image} src={prevNext} alt="previous page"/>
             </button>
 
             <ul className={cn(styles.pages, 'list-reset')}>
@@ -39,7 +39,7 @@ const Paginator = ({next, prev, total, currentPage, resource}) => {
             </ul>
 
             <button className={styles.btn} disabled={!next} onClick={nextPage}>
-                <img src={darkNext} alt="next page"/>
+                <img className={styles.image} src={darkNext} alt="next page"/>
             </button>
 
         </div>

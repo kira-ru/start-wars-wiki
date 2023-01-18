@@ -12,7 +12,7 @@ const FilmCard = ({film, smallSize=false}) => {
         <div className={classes}>
             <Image className={styles.img} src={film.image} alt={film.title}/>
             <p className={styles.title}>
-                <span>{film.title}</span>
+                {film.title}
             </p>
         </div>
     );

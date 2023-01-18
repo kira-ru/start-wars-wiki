@@ -2,7 +2,7 @@ import React from 'react';
 import {useGetResourceQuery} from "../../service/swapiAPI";
 import {FILMS} from "../../constants/swapiAPI";
 import Loader from "../../components/UI/Loader/Loader";
-import HomePage from "../../components/screens/HomePage/HomePage";
+import {HomePage} from "../../components/screens/HomePage/HomePage";
 import Error from "../../components/UI/Error/Error";
 
 const Home = () => {

@@ -6,7 +6,7 @@ import Grid from "../../Grid/Grid";
 import {Link} from "react-router-dom";
 import FilmCard from "../../FilmCard/FilmCard";
 
-const HomePage = ({films}) => {
+export const HomePage = ({films}) => {
 
     return (
         <section className={styles.wrapper}>
@@ -25,5 +25,3 @@ const HomePage = ({films}) => {
         </section>
     );
 };
-
-export default HomePage;

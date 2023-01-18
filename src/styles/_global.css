@@ -64,11 +64,6 @@ p {
     flex-direction: column;
 }
 
-.main {
-    flex: 1 1 auto;
-    margin-top: var(--menu-margin);
-}
-
 .container {
     margin: 0 auto;
     padding: 0 var(--container-offset);

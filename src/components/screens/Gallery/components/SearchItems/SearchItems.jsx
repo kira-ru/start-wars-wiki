@@ -10,10 +10,8 @@ import Loader from "../../../../UI/Loader/Loader";
 import Error from "../../../../UI/Error/Error";
 
 const SearchItems = ({resource, searchValue}) => {
-    const debounceSearchValue = useDebounce(searchValue, 1000)
-
-    const {data, isFetching, isError} = useSearchItemQuery({resource, searchValue: debounceSearchValue}, {
-        skip: debounceSearchValue === ''
+    const {data, isFetching, isError} = useSearchItemQuery({resource, searchValue: searchValue}, {
+        skip: searchValue === ''
     })
 
     if (isFetching) return <Loader/>
