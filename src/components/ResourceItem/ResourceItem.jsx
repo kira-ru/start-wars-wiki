@@ -2,10 +2,10 @@ import React from 'react';
 import cn from 'classnames'
 import Image from "../Image/Image";
 
-import styles from './item.module.css'
+import styles from './resourceitem.module.css'
 import {Link} from "react-router-dom";
 
-const Item = ({item, resource, classes}) => {
+const ResourceItem = ({item, resource, classes}) => {
 
     return (
         <Link
@@ -15,7 +15,6 @@ const Item = ({item, resource, classes}) => {
         >
             <li className={styles.item} key={item.name}>
                 <Image className={styles.item_image} src={item.image} alt={item.name}/>
-                {/*<img className={styles.item_image} src={item.image} alt={item.name}/>*/}
                 <span className={styles.item_name}>{item.name}</span>
             </li>
 
@@ -23,4 +22,4 @@ const Item = ({item, resource, classes}) => {
     );
 };
 
-export default Item;
+export default ResourceItem;

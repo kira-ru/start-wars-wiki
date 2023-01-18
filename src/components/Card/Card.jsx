@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './card.module.css'
-import {Link} from "react-router-dom";
+
 import Image from "../Image/Image";
 import cn from "classnames";
+import styles from './card.module.css'
 
 
 const Card = ({item, resource, smallSize=false}) => {
-    const classes = cn(styles.card, {
+    const classes = cn(styles.wrapper, {
         [styles.small]: smallSize,
         [styles.starship]: resource === 'starships',
     })

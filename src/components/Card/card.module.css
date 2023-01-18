@@ -1,4 +1,4 @@
-.card {
+.wrapper {
     display: block ;
     position: relative;
     border-radius: var(--border-radius-medium);

@@ -25,12 +25,12 @@ export function getDescription(resource, item) {
         case 'vehicles':
             return [
                 {param: 'Model', value: item.model},
-                {param: 'Cargo capacity', value: item.cargo_capacity},
                 {param: 'Manufacturer', value: item.manufacturer},
                 {param: 'Cost', value: item.cost_in_credits},
                 {param: 'Length', value: item.length},
                 {param: 'Crew', value: item.crew},
                 {param: 'Passengers', value: item.passengers},
+                {param: 'Cargo capacity', value: item.cargo_capacity},
                 {param: 'Vehicle class', value: item.vehicle_class},
             ]
         case 'species':

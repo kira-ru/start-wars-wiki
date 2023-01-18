@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
+
 import fallbackImage from './img/fallbackImage.webp'
 
 const Image = (props) => {
-
     const [isError, setIsError] = useState(false)
     const [src, setSrc] = useState(props.src)
 
