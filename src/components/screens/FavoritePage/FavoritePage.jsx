@@ -6,6 +6,7 @@ import FavoriteItems from "./components/FavoriteItems/FavoriteItems";
 
 const Favorite = () => {
     const favoriteItems =  useSelector(state => state.favorite)
+    const favoriteItemsEntries = Object.entries(favoriteItems)
 
     return (
         <section>
@@ -13,11 +14,11 @@ const Favorite = () => {
                 <Title>Favorite</Title>
 
                 {
-                    Object.entries(favoriteItems).map((favoriteEntities, index) =>
+                    favoriteItemsEntries.map(([resource, items]) =>
                         <FavoriteItems
-                            key={index}
-                            items={favoriteEntities[1]}
-                            title={favoriteEntities[0]}
+                            key={resource}
+                            items={resource}
+                            title={items}
                         />)
                 }
             </Container>

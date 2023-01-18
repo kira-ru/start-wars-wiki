@@ -1,7 +1,8 @@
 import React from 'react';
-import cn from 'classnames';
-import styles from './filmcard.module.css'
+
 import Image from "../Image/Image";
+import styles from './filmcard.module.css'
+import cn from 'classnames';
 
 const FilmCard = ({film, smallSize=false}) => {
     const classes = cn(styles.wrapper, {

@@ -1,8 +1,9 @@
 import React, {useMemo} from 'react';
+import {getDescription} from "../../helpers/getDescription";
+
+import Title from "../UI/Title/Title";
 import styles from './description.module.css'
 import cn from 'classnames'
-import Title from "../UI/Title/Title";
-import {getDescription} from "../../helpers/getDescription";
 
 const Description = ({resource, item}) => {
     const fields = useMemo(() => getDescription(resource, item), [item, resource])

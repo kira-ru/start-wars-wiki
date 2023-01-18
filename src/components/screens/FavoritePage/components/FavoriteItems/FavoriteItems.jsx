@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from "../../../../UI/Title/Title";
 import styles from "./favoriteitems.module.css"
-import Item from "../../../../Item/Item";
+import ResourceItem from "../../../../ResourceItem/ResourceItem";
 
 const FavoriteItems = ({title, items}) => {
     const itemsArray = Object.values(items)
@@ -14,7 +14,7 @@ const FavoriteItems = ({title, items}) => {
             <div className={styles.inner}>
 
                 {itemsArray.map(item =>
-                    <Item
+                    <ResourceItem
                         classes={styles.item}
                         key={item.name}
                         item={item}

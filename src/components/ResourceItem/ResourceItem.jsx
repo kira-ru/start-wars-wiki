@@ -2,10 +2,10 @@ import React from 'react';
 import cn from 'classnames'
 import Image from "../Image/Image";
 
-import styles from './item.module.css'
+import styles from './resourceitem.module.css'
 import {Link} from "react-router-dom";
 
-const Item = ({item, resource, classes}) => {
+const ResourceItem = ({item, resource, classes}) => {
 
     return (
         <Link
@@ -21,4 +21,4 @@ const Item = ({item, resource, classes}) => {
     );
 };
 
-export default Item;
+export default ResourceItem;

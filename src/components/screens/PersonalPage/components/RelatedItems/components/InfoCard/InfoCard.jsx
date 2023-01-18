@@ -2,7 +2,7 @@ import React from 'react';
 import Title from "../../../../../../UI/Title/Title";
 import MiniLoader from "../../../../../../UI/MiniLoader/MiniLoader";
 import MiniError from "../../../../../../UI/MiniError/MiniError";
-import Item from "../../../../../../Item/Item";
+import ResourceItem from "../../../../../../ResourceItem/ResourceItem";
 import {useGetRelatedItemsQuery} from "../../../../../../../service/swapiAPI";
 
 import styles from './infocard.module.css'
@@ -24,7 +24,7 @@ const InfoCard = ({itemsUrls, resource, classes}) => {
                 {
                     relatedItems.length
                     ? relatedItems.map(item => (
-                        <Item
+                        <ResourceItem
                             key={item.name}
                             item={item}
                             resource={resource}
