@@ -5,12 +5,18 @@ import InfoCard from "./components/InfoCard/InfoCard";
 
 const RelatedItems = ({relatedItemsUrls}) => {
     const related = Object.entries(relatedItemsUrls)
-    console.log(relatedItemsUrls)
+
     return (
         <div className={styles.related}>
+
             {related.map(([resource, urls]) =>
-                <InfoCard key={resource} itemsUrls={urls} resource={resource}/>
+                <InfoCard
+                    key={resource}
+                    itemsUrls={urls}
+                    resource={resource}
+                />
             )}
+
         </div>
     );
 };

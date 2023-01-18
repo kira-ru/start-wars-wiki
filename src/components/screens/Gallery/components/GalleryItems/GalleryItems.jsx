@@ -1,12 +1,12 @@
 import React from 'react';
-import {Link, useSearchParams} from "react-router-dom";
 import Card from "../../../../Card/Card";
-import styles from './galleryitems.module.css'
 import Grid from "../../../../Grid/Grid";
-import {useGetResourceQuery} from "../../../../../service/swapiAPI";
-import Paginator from "../../../../UI/Paginator/Paginator";
 import Loader from "../../../../UI/Loader/Loader";
 import Error from "../../../../UI/Error/Error";
+import Paginator from "../../../../UI/Paginator/Paginator";
+
+import {useGetResourceQuery} from "../../../../../service/swapiAPI";
+import {Link, useSearchParams} from "react-router-dom";
 
 const GalleryItems = ({resource}) => {
     const [queryParams] = useSearchParams()

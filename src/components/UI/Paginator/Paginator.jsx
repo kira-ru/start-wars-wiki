@@ -1,13 +1,14 @@
 import React, {useMemo} from 'react';
-import {Link, useParams, useSearchParams} from "react-router-dom";
-import {createPageList, getTotalPages} from "../../../helpers";
-import darkNext from './img/dark-next.png'
-import prevNext from './img/dark-prev.png'
+import nextBtn from './img/dark-next.png'
+import prevBtn from './img/dark-prev.png'
 import styles from './paginator.module.css'
 import PageLink from "../PageLink/PageLink";
 import cn from 'classnames'
 
-const Paginator = ({next, prev, total, currentPage, resource}) => {
+import {createPageList, getTotalPages} from "../../../helpers";
+import {useSearchParams} from "react-router-dom";
+
+const Paginator = ({next, prev, total, currentPage}) => {
     const [$, setPage] = useSearchParams();
 
     const prevPage = () => {
@@ -21,15 +22,15 @@ const Paginator = ({next, prev, total, currentPage, resource}) => {
     const totalPages = getTotalPages(total)
     const pageList = useMemo(() => createPageList(totalPages), [totalPages])
 
-    // function nextPage() {
-    //     .push(`/${resource}?page=${+currentPage-1}`)
-    // }
-
     return (
         <div className={styles.paginator}>
 
-            <button className={styles.btn} disabled={!prev} onClick={prevPage}>
-                <img src={prevNext} alt="previous page"/>
+            <button
+                className={styles.btn}
+                disabled={!prev}
+                onClick={prevPage}
+            >
+                <img className={styles.image} src={prevBtn} alt="previous page"/>
             </button>
 
             <ul className={cn(styles.pages, 'list-reset')}>
@@ -38,8 +39,12 @@ const Paginator = ({next, prev, total, currentPage, resource}) => {
                 ))}
             </ul>
 
-            <button className={styles.btn} disabled={!next} onClick={nextPage}>
-                <img src={darkNext} alt="next page"/>
+            <button
+                className={styles.btn}
+                disabled={!next}
+                onClick={nextPage}
+            >
+                <img className={styles.image} src={nextBtn} alt="next page"/>
             </button>
 
         </div>

@@ -1,17 +1,18 @@
 import React from 'react';
-import styles from "./homepage.module.css";
 import Container from "../../Container/Container";
 import Title from "../../UI/Title/Title";
 import Grid from "../../Grid/Grid";
-import {Link} from "react-router-dom";
 import FilmCard from "../../FilmCard/FilmCard";
+import styles from "./filmspage.module.css";
 
-const HomePage = ({films}) => {
+import {Link} from "react-router-dom";
+
+const FilmsPage = ({films}) => {
 
     return (
-        <section className={styles.wrapper}>
+        <section>
             <Container>
-                <Title>Star Wars</Title>
+                <Title classes={styles.title}>Star Wars films</Title>
                 <Grid classes={styles.grid}>
                     {
                         films.map(film => (
@@ -26,4 +27,4 @@ const HomePage = ({films}) => {
     );
 };
 
-export default HomePage;
+export default FilmsPage;

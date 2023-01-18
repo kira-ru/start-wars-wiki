@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
-import Input from "../../../../UI/Input/Input";
-import styles from "../../gallery.module.css";
-import {useDebounce} from "../../../../../hooks";
-import {useSearchItemQuery} from "../../../../../service/swapiAPI";
-import {Link} from "react-router-dom";
+import React from 'react';
 import Card from "../../../../Card/Card";
 import Grid from "../../../../Grid/Grid";
 import Loader from "../../../../UI/Loader/Loader";
 import Error from "../../../../UI/Error/Error";
+import styles from "../../gallery.module.css";
+
+import {useDebounce} from "../../../../../hooks";
+import {useSearchItemQuery} from "../../../../../service/swapiAPI";
+import {Link} from "react-router-dom";
 
 const SearchItems = ({resource, searchValue}) => {
     const debounceSearchValue = useDebounce(searchValue, 1000)

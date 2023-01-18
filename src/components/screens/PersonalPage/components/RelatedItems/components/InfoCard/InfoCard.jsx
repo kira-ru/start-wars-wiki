@@ -15,7 +15,7 @@ const InfoCard = ({itemsUrls, resource, classes}) => {
     if (isError) return <MiniError/>
 
     return (
-        <div className={cn(styles.info_card, classes)}>
+        <div className={cn(styles.infoCard, classes)}>
             <Title classes={styles.title} level={3}>
                 Related {resource}
             </Title>

@@ -1,19 +1,19 @@
 import React from 'react';
+
 import Title from "../../../../UI/Title/Title";
-import styles from "./favoriteitems.module.css"
 import ResourceItem from "../../../../ResourceItem/ResourceItem";
+import styles from "./favoriteitems.module.css"
 
 const FavoriteItems = ({title, items}) => {
-    const itemsArray = Object.values(items)
+    const arrayOfItems = Object.values(items)
 
-    if (!itemsArray.length) return
+    if (!arrayOfItems.length) return
 
     return (
         <div className={styles.wrapper}>
             <Title classes={styles.title}>{title}:</Title>
             <div className={styles.inner}>
-
-                {itemsArray.map(item =>
+                {arrayOfItems.map(item =>
                     <ResourceItem
                         classes={styles.item}
                         key={item.name}
@@ -21,7 +21,6 @@ const FavoriteItems = ({title, items}) => {
                         resource={item.resource}
                     />
                 )}
-
             </div>
         </div>
     );

@@ -1,8 +1,8 @@
 import React from 'react';
 import cn from 'classnames'
 import Image from "../Image/Image";
-
 import styles from './resourceitem.module.css'
+
 import {Link} from "react-router-dom";
 
 const ResourceItem = ({item, resource, classes}) => {
@@ -14,8 +14,8 @@ const ResourceItem = ({item, resource, classes}) => {
             to={`/${resource}/${item.id}`}
         >
             <li className={styles.item} key={item.name}>
-                <Image className={styles.item_image} src={item.image} alt={item.name}/>
-                <span className={styles.item_name}>{item.name}</span>
+                <Image className={styles.itemImage} src={item.image} alt={item.name}/>
+                <span className={styles.itemName}>{item.name}</span>
             </li>
 
         </Link>

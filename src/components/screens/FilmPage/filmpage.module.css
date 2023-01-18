@@ -5,7 +5,3 @@
     gap: 10px;
     margin-bottom: 30px;
 }
-
-.slider + .slider {
-    margin-top: 70px;
-}

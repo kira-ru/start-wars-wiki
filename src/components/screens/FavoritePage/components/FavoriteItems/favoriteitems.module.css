@@ -1,5 +1,5 @@
-.wrapper {
-
+.wrapper + .wrapper {
+    margin-top: 20px;
 }
 
 .inner {
@@ -7,10 +7,16 @@
     flex-wrap: wrap;
 }
 
+.item {
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    padding: 5px;
+}
 .item + .item {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .title {
     font-size: 20px;
+    margin-bottom: 10px;
 }

@@ -9,16 +9,16 @@ import FavoriteIcon from "./components/FavoriteIcon/FavoriteIcon";
 import styles from './header.module.css'
 import cn from 'classnames'
 
-const Header = () => {
-    const links = [
-        {text: 'Home', href: '/'},
-        {text: 'People', href: '/people?page=1'},
-        {text: 'Starships', href: '/starships?page=1'},
-        {text: 'Vehicles', href: '/vehicles?page=1'},
-        {text: 'Planets', href: '/planets?page=1'},
-        {text: 'Species', href: '/species?page=1'},
-    ]
+const LINKS = [
+    {text: 'Films', href: '/'},
+    {text: 'People', href: '/people?page=1'},
+    {text: 'Starships', href: '/starships?page=1'},
+    {text: 'Vehicles', href: '/vehicles?page=1'},
+    {text: 'Planets', href: '/planets?page=1'},
+    {text: 'Species', href: '/species?page=1'},
+]
 
+const Header = () => {
     const [dropDownActive, setDropDownActive] = useState(false)
 
     return (
@@ -32,11 +32,11 @@ const Header = () => {
                                 handler={() => setDropDownActive(!dropDownActive)}
                                 classes={styles.burger_btn}
                             />
-                            <Dropdown active={dropDownActive} setActive={setDropDownActive} links={links}/>
+                            <Dropdown active={dropDownActive} setActive={setDropDownActive} links={LINKS}/>
                             <Logo classes={styles.logo}/>
                         </div>
 
-                        <NavMenu links={links}/>
+                        <NavMenu links={LINKS}/>
 
                         <FavoriteIcon/>
                     </ul>

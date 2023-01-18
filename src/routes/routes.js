@@ -1,16 +1,17 @@
 import appRoutes from "./appRoutes";
+import FavoritePage from "../components/screens/FavoritePage/FavoritePage";
 import Layout from "../components/Layout/Layout";
 import Gallery from "../components/screens/Gallery/Gallary";
 import Person from "../pages/person/Person";
 import Starship from "../pages/starship/Starship";
 import Vehicles from "../pages/vehicle/Vehicles";
-import {PEOPLE, PLANETS, SPECIES, STARSHIPS, VEHICLES} from "../constants/swapiAPI";
 import Planet from "../pages/planet/Planet";
 import Species from "../pages/species/Species";
-import Home from "../pages/home/Home";
+import Films from "../pages/films/Films";
 import Error from "../components/UI/Error/Error";
 import Film from "../pages/film/Film";
-import Favorite from "../pages/favorite/Favorite";
+
+import {PEOPLE, PLANETS, SPECIES, STARSHIPS, VEHICLES} from "../constants/swapiAPI";
 
 const routesConfig = [
     {
@@ -19,7 +20,7 @@ const routesConfig = [
         children: [
             {
                 index: true,
-                element: <Home/>
+                element: <Films/>
             },
             {
                 path: appRoutes.PEOPLE,
@@ -67,7 +68,7 @@ const routesConfig = [
             },
             {
                 path: appRoutes.FAVORITE,
-                element: <Favorite/>
+                element: <FavoritePage/>
             },
 
             {
@@ -76,7 +77,6 @@ const routesConfig = [
             },
         ]
     },
-
 ]
 
 export default routesConfig;

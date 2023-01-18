@@ -22,11 +22,13 @@ const RelatedItems = ({resource, itemsUrls}) => {
             {isError
                 ? <MiniError/>
                 : <Slider largeSize={true}>
-                    {data && data.map(item => (
+
+                    {data.map(item => (
                         <Link key={item.name} to={`/${resource}/${item.id}`}>
                             <Card item={item} smallSize={true}/>
                         </Link>
                     ))}
+
                   </Slider>
             }
 
