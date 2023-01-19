@@ -11,11 +11,9 @@ import {Link} from "react-router-dom";
 
 const SearchItems = ({resource, searchValue}) => {
     const debounceSearchValue = useDebounce(searchValue, 1000)
-
     const {data, isFetching, isError} = useSearchItemQuery({resource, searchValue: debounceSearchValue}, {
-        skip: debounceSearchValue === ''
+        skip: debounceSearchValue === '' || debounceSearchValue.length === 1
     })
-
     if (isFetching) return <Loader/>
     if (isError) return <Error/>
 
@@ -23,7 +21,7 @@ const SearchItems = ({resource, searchValue}) => {
     return (
         <>
             {
-                searchResult.length
+                (searchResult && searchResult.length)
                     ? <Grid>
                         {
                             searchResult.map(item => (
@@ -39,7 +37,6 @@ const SearchItems = ({resource, searchValue}) => {
                       </p>
             }
         </>
-
 )
     ;
 };

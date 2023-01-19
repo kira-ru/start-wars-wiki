@@ -3,7 +3,7 @@ import {getTotalPages} from './getTotalpages'
 import {createPageList} from "./createPageList";
 import {getItemImage} from "./getCharactersData";
 import {transformData} from "./transformData";
-import {getFavoriteItemsNumber} from './getFavoriteItemsNumber'
+import {getFavoriteItemsAmount} from './getFavoriteItemsAmount'
 
 export {
     getResourceAndId,
@@ -11,5 +11,5 @@ export {
     getItemImage,
     createPageList,
     transformData,
-    getFavoriteItemsNumber
+    getFavoriteItemsAmount
 }

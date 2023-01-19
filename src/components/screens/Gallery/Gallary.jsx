@@ -30,6 +30,7 @@ const Gallery = ({resource}) => {
                         ? <SearchItems resource={resource} searchValue={searchValue}/>
                         : <GalleryItems resource={resource}/>
                 }
+
             </Container>
         </section>
     );
