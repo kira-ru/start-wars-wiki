@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/star-wars-wiki/static/css/main.d022a00d.css",
+    "main.js": "/star-wars-wiki/static/js/main.8de8f5bb.js",
+    "static/media/star-wars-backgrounds.jpg": "/star-wars-wiki/static/media/star-wars-backgrounds.5ae90e8ea82044a58640.jpg",
+    "static/media/fallbackImage.webp": "/star-wars-wiki/static/media/fallbackImage.07b752310412dd51badc.webp",
+    "static/media/dark-next.png": "/star-wars-wiki/static/media/dark-next.0415eace691ae200a0ed.png",
+    "static/media/slick.svg": "/star-wars-wiki/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/star-wars-wiki/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/star-wars-wiki/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/star-wars-wiki/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/star-wars-wiki/index.html",
+    "main.d022a00d.css.map": "/star-wars-wiki/static/css/main.d022a00d.css.map",
+    "main.8de8f5bb.js.map": "/star-wars-wiki/static/js/main.8de8f5bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d022a00d.css",
+    "static/js/main.8de8f5bb.js"
+  ]
+}
